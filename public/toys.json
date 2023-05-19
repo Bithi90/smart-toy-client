@@ -1,0 +1,122 @@
+[
+    {
+        "_id": ,
+        "picture": "https://i.ibb.co/mSWsKGr/6d7b116c059fde187e8d3a4704037e1e-frozen-dolls-frozen-disney.jpg",
+        "name":"Frozen Elsa",
+        "price":"$12",
+        "rating":"3.4",
+        "available_Quantity":"67",
+        "details":" From the outside, Elsa looks poised, regal and reserved, but in reality, she lives in fear as she wrestles with a mighty secret—she was born with the power to create ice and snow. It's a beautiful ability, but also extremely dangerous.",
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    },
+    {
+        "_id": ,
+        "picture": ,
+        "name": ,
+        "price": ,
+        "rating": ,
+        "available_Quantity": ,
+        "details": ,
+        "category_id":
+    }
+]
