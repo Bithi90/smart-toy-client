@@ -39,7 +39,7 @@ const NavBer = () => {
                         <img src={profile} />
                     </div>
                 </label>
-                <a className="btn btn-accent">Login</a>
+                <Link to='/login' className="btn btn-accent">Login</Link>
             </div>
         </div>
 
