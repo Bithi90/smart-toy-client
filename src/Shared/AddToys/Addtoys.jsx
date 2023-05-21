@@ -4,6 +4,10 @@ import { useState } from "react";
 const Addtoys = () => {
 
     const [name, setName] = useState("");
+    const [sellerEmail, setSellerEmail] = useState("");
+    const [rating, setRating] = useState("");
+    const [availableQuantity, setAvailableQuantity] = useState("");
+    const [detail, setDetail] = useState("");
     const [photo, setPhoto] = useState("");
     const [price, setPrice] = useState("");
     const [sellerName, setSellerName] = useState("");
@@ -15,7 +19,11 @@ const Addtoys = () => {
             name:name,
             photo:photo,
             price:price,
-            sellerName:sellerName
+            sellerName:sellerName,
+            sellerEmail:sellerEmail,
+            rating:rating,
+            availableQuantity:availableQuantity,
+            detail:detail
         }
 
         console.log(add)
@@ -32,6 +40,9 @@ const Addtoys = () => {
         })
         .then(res => res.json())
         .then(data =>{
+            if(data.insertedId){
+                alert('Your Toy is Added Successfully');
+            }
             console.log(data);
         })
 
@@ -67,7 +78,7 @@ const Addtoys = () => {
                         <label className="label">
                             <span className="label-text">Seller Email</span>
                         </label>
-                        <input  type="text" name="seller_email" placeholder="seller email" className="input input-bordered" />
+                        <input onChange = {((e) =>setSellerEmail(e.target.value))} type="text" name="seller_email" placeholder="seller email" className="input input-bordered" />
 
                     </div>
                     <div className="form-control ">
@@ -80,20 +91,20 @@ const Addtoys = () => {
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
-                        <input type="text" name="rating" placeholder="rating" className="input input-bordered" />
+                        <input onChange = {((e) =>setRating(e.target.value))} type="text" name="rating" placeholder="rating" className="input input-bordered" />
 
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Available quantity</span>
+                            <span  className="label-text">Available quantity</span>
                         </label>
-                        <input type="text" name="available quantity" placeholder="available quantity" className="input input-bordered" />
+                        <input onChange = {((e) =>setAvailableQuantity(e.target.value))} type="text" name="available_quantity" placeholder="available quantity" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Detail description</span>
                         </label>
-                        <input type="text" name="detail description" placeholder="detail description" className="input input-bordered" />
+                        <input onChange = {((e) =>setDetail(e.target.value))} type="text" name="detail" placeholder="detail description" className="input input-bordered" />
 
                     </div>
 
