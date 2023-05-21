@@ -9,6 +9,7 @@ import Blog from "../Shared/Blog/Blog";
 import AllToys from "../Shared/AllToys/AllToys";
 import Addtoys from "../Shared/AddToys/Addtoys";
 import MyToys from "../Shared/MyToys/MyToys";
+import PrivateRoute from "../Shared/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'details/:id',
-        element: <ToysDetails></ToysDetails>,
+        element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
       },
       {
