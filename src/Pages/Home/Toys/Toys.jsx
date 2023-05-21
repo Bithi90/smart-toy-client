@@ -14,7 +14,7 @@ const Toys = () => {
 
     return (
         <div>
-            <div><h3>this is toys:{toys.length}</h3></div>
+            <div><h3 className="text-center text-5xl my-16 font-bold text-pink-900"> Toys By Category</h3></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center">
                 {
                     toys.map(toy => <ToyCard
