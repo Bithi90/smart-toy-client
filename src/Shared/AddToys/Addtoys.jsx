@@ -6,8 +6,8 @@ const Addtoys = () => {
         event.preventDdefault();
 
         const form = event.terget;
-        const name= form.name.value;
-        const photo = form.photo.value;
+        // const name= form.name.value;
+        // const photo = form.photo.value;
         const seller_name= form.seller_name.value;
         const seller_email= form.seller_email.value;
         const price= form.price.value;
@@ -20,6 +20,19 @@ const Addtoys = () => {
 
         }
         console.log(add);
+
+        fetch('http://localhost:5000/addedToy',{
+            method:'POST',
+            headers: {
+                    'content-type': 'application/json'
+            },
+            body:JSON.stringify(add)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+        })
+
     }
 
     return (
