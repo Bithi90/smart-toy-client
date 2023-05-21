@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 import ToysDetails from "../Pages/ToysDetails/ToysDetails";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       //   {
       //     path: ':id',
       //     element:<Category></Category>,
-      //     loader:({params}) => fetch(`https://recipe-hub-server-bka3670-gmailcom.vercel.app/categories/${params.id}`)
+      //     loader:() => fetch(`http://localhost:5000/categories`)
       // }
     ]
   },

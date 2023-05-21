@@ -1,9 +1,13 @@
 
 
-const Category = () => {
+
+const Category = ({category}) => {
+
+   const {name} = category;
+
     return (
         <div>
-            <h2>category</h2>
+            <h2>{name}</h2>
         </div>
     );
 };
