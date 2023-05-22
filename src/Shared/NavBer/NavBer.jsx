@@ -7,10 +7,12 @@ const NavBer = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    const handleLogOut= () =>{
+
+
+    const handleLogOut = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error));
+            .then()
+            .catch(error => console.log(error));
     }
 
     return (
@@ -39,25 +41,30 @@ const NavBer = () => {
                 <ul className=" menu menu-horizontal px-2 tabs">
                     <Link className='px-2  ' to='/'>Home</Link>
                     <Link className='px-2 ' to='/allToys'>All Toys</Link>
-                    <Link className='px-2 ' to='/myToys'>My Toys</Link>
+                    {user?.email ? <Link className='px-2 ' to='/myToys'>My Toys</Link> :
+                        <Link className='px-2 ' to='/login'>My Toys</Link>}
+
                     <Link className='px-2 ' to='/addToys'>Add A Toys</Link>
-                    <Link className='px-2 ' to='/blog'>Blog</Link>
+                    <Link className=' px-2 ' to='/blog'>Blog</Link>
                 </ul>
             </div>
             <div className="navbar-end">
                 {
                     user && <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img src={profile} />
-                    </div>
-                </label>
+                        <div className="w-10 rounded-full">
+                            <img src={user.photo} alt="" />
+                        </div>
+                    </label>
                 }
                 {
-                    user? <Link to='/login' onClick={handleLogOut} className="btn btn-accent">Logout</Link> :
-                       <Link to='/login' className="btn btn-accent">Login</Link>
+                    user ?
+
+                        <Link to='/login' onClick={handleLogOut} className="btn btn-accent">Logout</Link>
+                        :
+                        <Link to='/login' className="btn btn-accent">Login</Link>
                 }
-                
-             
+
+
             </div>
         </div>
 

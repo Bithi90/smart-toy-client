@@ -1,6 +1,6 @@
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
-import Category from "../Category/Category";
+
 import TopProduct from "../TopProduct/TopProduct";
 import Toys from "../Toys/Toys";
 

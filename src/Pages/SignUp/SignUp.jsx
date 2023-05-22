@@ -1,14 +1,29 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/login@4x.png';
 
 import { AuthContext } from '../../Provider/AuthProvider';
 import { useContext } from 'react';
+import { FaGoogle } from 'react-icons/fa';
 
 
 const SignUp = () => {
 
-   const {createUser} =useContext(AuthContext);
+   const {createUser , signInWithGoogle } =useContext(AuthContext);
    const navigate = useNavigate();
+   const location = useLocation();
+   const from = location.state?.from?.pathname || '/';
+
+   const handleGoogleSignUp = () =>{
+    signInWithGoogle()
+    .then(result =>{
+        const GUser = result.user;
+        console.log(GUser);
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+}
+
 
     const  handleSignUp = event =>{
         event.preventDefault();
@@ -23,7 +38,7 @@ const SignUp = () => {
             .then(result =>{
                 const user = result.user;
                 console.log(user);
-                  navigate('/')
+                navigate(from, { replace: true });
             })
             .catch(error => console.log(error))
             
@@ -73,7 +88,12 @@ const SignUp = () => {
                             </div>
                         </form>
                         <h2>Allready Have an Account? Plz <Link className='text-sky-700 font-bold' to='/login'>Login</Link></h2>
+                        <div className='text-center '>
+                           <h2 className='text-2xl pb-3'>___or___</h2>
+                            <button onClick={handleGoogleSignUp} className='text-3xl text-blue-800'><FaGoogle /></button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

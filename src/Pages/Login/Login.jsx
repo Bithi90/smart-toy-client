@@ -2,29 +2,42 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/login@4x.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
-   const {signIn} = useContext(AuthContext);
-   const navigate = useNavigate();
-   const location = useLocation();
-   const from = location.state?.from?.pathname || '/';
+    const { signIn , signInWithGoogle } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    const handleGoogleSignIN = () =>{
+        signInWithGoogle()
+        .then(result =>{
+            const GUser = result.user;
+            console.log(GUser);
+            navigate(from, { replace: true });
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
 
 
-    const  handleLogin = event =>{
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name , email, password)
+        console.log(name, email, password)
 
         signIn(email, password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            navigate(from , { replace: true });
-        })
-        .catch(error => console.log(error))
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.log(error))
     }
 
     return (
@@ -59,6 +72,10 @@ const Login = () => {
                             </div>
                         </form>
                         <h2>New to Smart Toys? Plz <Link className='text-sky-700 font-bold' to='/signup'>Sign Up</Link></h2>
+                        <div className='text-center '>
+                           <h2 className='text-2xl pb-3'>___or___</h2>
+                            <button onClick={handleGoogleSignIN} className='text-3xl text-blue-800'><FaGoogle /></button>
+                        </div>
                     </div>
                 </div>
             </div>
