@@ -25,12 +25,12 @@ const NavBer = () => {
 
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-2">
-                    <Link className='px-2' to='/'>Home</Link>
-                    <Link className='px-2' to='/'>All Toys</Link>
-                    <Link className='px-2' to='/'>My Toys</Link>
-                    <Link className='px-2' to='/'>Add A Toys</Link>
-                    <Link className='px-2' to='/'>Blog</Link>
+                <ul className=" menu menu-horizontal px-2 tabs">
+                    <Link className='px-2  ' to='/'>Home</Link>
+                    <Link className='px-2 ' to='/allToys'>All Toys</Link>
+                    <Link className='px-2 ' to='/myToys'>My Toys</Link>
+                    <Link className='px-2 ' to='/addToys'>Add A Toys</Link>
+                    <Link className='px-2 ' to='/blog'>Blog</Link>
                 </ul>
             </div>
             <div className="navbar-end">

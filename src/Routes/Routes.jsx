@@ -5,6 +5,10 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 import ToysDetails from "../Pages/ToysDetails/ToysDetails";
+import Blog from "../Shared/Blog/Blog";
+import AllToys from "../Shared/AllToys/AllToys";
+import Addtoys from "../Shared/AddToys/Addtoys";
+import MyToys from "../Shared/MyToys/MyToys";
 
 
 const router = createBrowserRouter([
@@ -25,10 +29,26 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       },
       {
-        path:'details/:id',
-        element:<ToysDetails></ToysDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
-      }
+        path: 'details/:id',
+        element: <ToysDetails></ToysDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+      },
+      {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+      {
+        path: 'allToys',
+        element: <AllToys></AllToys>
+      }, 
+      {
+        path: 'addToys',
+        element: <Addtoys></Addtoys>
+      },
+      {
+        path: 'myToys',
+        element: <MyToys></MyToys>
+      },
       //   {
       //     path: ':id',
       //     element:<Category></Category>,
