@@ -10,6 +10,9 @@ import AllToys from "../Shared/AllToys/AllToys";
 import Addtoys from "../Shared/AddToys/Addtoys";
 import MyToys from "../Shared/MyToys/MyToys";
 import PrivateRoute from "../Shared/PrivateRoute/PrivateRoute";
+import Category from "../Pages/Home/Category/Category";
+import Toys from "../Pages/Home/Toys/Toys";
+
 
 
 const router = createBrowserRouter([
@@ -50,11 +53,16 @@ const router = createBrowserRouter([
         path: 'myToys',
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
-      //   {
-      //     path: ':id',
-      //     element:<Category></Category>,
-      //     loader:() => fetch(`http://localhost:5000/categories`)
-      // }
+      {
+          path: 'category/:id',
+          element:<Category></Category>    
+      },
+      {
+        path:'toys',
+        element:<Toys></Toys>,
+        loader:({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+      }
+    
     ]
   },
   {

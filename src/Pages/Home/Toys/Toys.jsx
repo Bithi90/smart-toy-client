@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 import ToyCard from "./ToyCard";
+import { useLoaderData } from "react-router-dom";
 
 
 const Toys = () => {
 
     const [toys, setToys] = useState([]);
+   
+   
+
+    const url = `http://localhost:5000/category}`;
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch(url)
             .then(res => res.json())
             .then(data => setToys(data))
-    }, [])
+    }, [url])
 
     return (
         <div>
