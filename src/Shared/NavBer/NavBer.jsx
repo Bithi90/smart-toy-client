@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images (7) - Copy.jpg';
-import profile from '../../assets/user (1).png';
+
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 const NavBer = () => {
