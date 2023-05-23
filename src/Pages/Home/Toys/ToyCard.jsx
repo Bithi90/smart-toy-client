@@ -3,21 +3,20 @@
 import { Link } from "react-router-dom";
 
 
-const ToyCard = ({ toy }) => {
-    const { _id, picture, name, price, available_Quantity } = toy;
+const ToyCard = (categoryToy) => {
+    console.log(categoryToy);
+    const { _id, picture, name, price, available_Quantity } = categoryToy;
     return (
-        <div className="card w-96 h-fit bg-base-100 shadow-xl">
-            <figure><img className="h-96" src={picture} /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    {name}
-                </h2>
-                <div className="flex justify-between">
-                    <h2>Price - {price}</h2>
-                    <h2>Quantity - {available_Quantity}</h2>
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+                <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+            </figure>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div className="card-actions">
+                    <button className="btn btn-primary">Buy Now</button>
                 </div>
-                <Link to={`/details/${_id}`}><button className="btn btn-accent mb-0">View Details</button></Link>
-
             </div>
         </div>
     );

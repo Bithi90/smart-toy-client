@@ -11,7 +11,7 @@ import Addtoys from "../Shared/AddToys/Addtoys";
 import MyToys from "../Shared/MyToys/MyToys";
 import PrivateRoute from "../Shared/PrivateRoute/PrivateRoute";
 import Category from "../Pages/Home/Category/Category";
-import Toys from "../Pages/Home/Toys/Toys";
+
 
 
 
@@ -56,12 +56,8 @@ const router = createBrowserRouter([
       {
           path: 'category/:id',
           element:<Category></Category>    
-      },
-      {
-        path:'toys',
-        element:<Toys></Toys>,
-        loader:({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
       }
+      
     
     ]
   },
