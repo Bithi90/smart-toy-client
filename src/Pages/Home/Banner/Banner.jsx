@@ -5,11 +5,11 @@ import picture4 from '../../../assets/disney_miss_bunny_easter_egg_plush_1491651
 
 const Banner = () => {
     return (
-        <div className="carousel w-full h-[600px]  ">
+        <div className="carousel w-[300px]  lg:w-full h-[300px] lg:h-[650px]  ">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src={picture1} className="w-full" />
+                <img src={picture1} className="w-[300px]  lg:w-full h-[300px] lg:h-[650px] " />
                 <div>
-                    <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-6xl text-left ps-28 left-0 font-bold w-1/3 spach-y-7 pt-44 ">
+                    <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute lg:h-full  text-2xl lg:text-6xl text-left ps-28 left-0 font-bold w-1/3 spach-y-7 pt-28 lg:pt-44 ">
                         <h1 className='text-pink-900'>Lets Play <br /> Any <br /> Time</h1>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -18,9 +18,9 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <div id="slide2" className="carousel-item relative w-full">
+            <div id="slide2" className="carousel-item relative w-full items-center">
                 <img src={picture2} className="w-full" />
-                <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-6xl text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-44 ">
+                <div className=" bg-gradient-to-r text-2xl lg:text-6xl from-cyan-200 to-blue-0  absolute h-full   text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-28 lg:pt-44 ">
                         <h1 className='text-pink-900'>Lets Play <br /> All <br />Day </h1>
                     </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -30,7 +30,7 @@ const Banner = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <img src={picture3} className="w-full" />
-                <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-6xl text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-44 ">
+                <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-2xl lg:text-6xl text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-28 lg:pt-44 ">
                         <h1 className='text-pink-900'>Lets Play <br /> Any <br /> Time</h1>
                     </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -40,7 +40,7 @@ const Banner = () => {
             </div>
             <div id="slide4" className="carousel-item relative w-full">
                 <img src={picture4} className="w-full " />
-                <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-6xl text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-44 ">
+                <div className=" bg-gradient-to-r from-cyan-200 to-blue-0  absolute h-full  text-2xl lg:text-6xl text-left ps-24 left-0 font-bold w-1/3 spach-y-7 pt-28 lg:pt-44 ">
                         <h1 className='text-pink-900'>Lets Play <br /> All <br /> Day </h1>
                     </div>
                 <div className=" absolute flex justify-between transform -translate-y-1/3 left-5 right-5 top-1/2">

@@ -9,7 +9,7 @@ const MyToys = () => {
     console.log(user);
     const [myToys, setMyToys] = useState([]);
 
-    const url = `http://localhost:5000/addedToy?sellerEmail=${user?.email}`;
+    const url = `https://smart-toy-store-server.vercel.app/addedToy?sellerEmail=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -21,7 +21,7 @@ const MyToys = () => {
         const proceed = confirm('Are you sure you want to delete?');
 
         if(proceed){
-            fetch(`http://localhost:5000/addedToy/${id}`,{
+            fetch(`https://smart-toy-store-server.vercel.app/addedToy/${id}`,{
                 method:'DELETE'
             })
             .then(res => res.json())
@@ -38,7 +38,7 @@ const MyToys = () => {
     
 
     const handleUpdate = id =>{
-        fetch(`http://localhost:5000/addedToy/${id}`,{
+        fetch(`https://smart-toy-store-server.vercel.app/addedToy/${id}`,{
             method: 'PATCH',
             headers:{
                 'content-type':'application/json'

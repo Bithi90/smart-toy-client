@@ -30,7 +30,7 @@ const Addtoys = () => {
      
        
 
-        fetch('http://localhost:5000/addedToy',{
+        fetch('https://smart-toy-store-server.vercel.app/addedToy',{
             method:'POST',
             headers: {
                 'Accept': 'application/json',

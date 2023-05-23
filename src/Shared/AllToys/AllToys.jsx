@@ -10,7 +10,7 @@ const AllToys = () => {
     console.log(user);
     const [AllToys, setAllToys] = useState([]);
 
-    const url = `http://localhost:5000/addedToy`;
+    const url = `https://smart-toy-store-server.vercel.app/addedToy`;
 
     useEffect(() => {
         fetch(url)
@@ -22,7 +22,7 @@ const AllToys = () => {
         const proceed = confirm('Are you sure you want to delete?');
 
         if (proceed) {
-            fetch(`http://localhost:5000/addedToy/${id}`, {
+            fetch(`https://smart-toy-store-server.vercel.app/addedToy/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -39,7 +39,7 @@ const AllToys = () => {
 
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/addedToy/${id}`, {
+        fetch(`https://smart-toy-store-server.vercel.app/addedToy/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const Toys = () => {
     const [categoryToys, setCategoryToys] = useState([]);
 
 
-    const url = 'http://localhost:5000/toys';
+    const url = 'https://smart-toy-store-server.vercel.app/toys';
 
     useEffect(() => {
         fetch(url)
