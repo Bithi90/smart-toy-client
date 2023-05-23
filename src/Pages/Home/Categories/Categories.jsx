@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Category from "../Category/Category";
-import Toys from "../Toys/Toys";
+
 
 
 const Categories = () => {
@@ -17,7 +17,7 @@ const Categories = () => {
                 <h2 className="text-center text-5xl my-16 font-bold text-pink-900">CATEGORIES FEATURES</h2>
 
             </div>
-            <div className=" grid grid-cols-5 gap-5 justify-items-center">
+            <div className=" grid grid-cols-5 gap-5 justify-items-center content-end">
                 {
                     categories.map(category => <Category
                         key={category._id}
