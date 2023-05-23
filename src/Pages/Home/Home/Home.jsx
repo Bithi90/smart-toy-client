@@ -2,7 +2,8 @@ import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
 
 import TopProduct from "../TopProduct/TopProduct";
-// import ToyCard from "../Toys/ToyCard";
+import Toys from "../Toys/Toys";
+
 
 
 
@@ -11,7 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Categories></Categories>
-           
+           <Toys></Toys>
             <TopProduct></TopProduct>
         </div>
     );

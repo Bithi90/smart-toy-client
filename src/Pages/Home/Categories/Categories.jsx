@@ -25,15 +25,8 @@ const Categories = () => {
                     ></Category>)
                 }
             </div>
-            <div className="text-center text-5xl my-16 font-bold text-pink-900">
-                {
-                    categories.map(category => <Toys
-                        key={category._id}
-                        category={category}
-                    ></Toys>)
-                }
             </div>
-        </div>
+       
     );
 };
 

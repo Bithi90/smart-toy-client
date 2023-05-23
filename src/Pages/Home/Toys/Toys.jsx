@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import ToyCard from './ToyCard';
 
-const Toys = ({category}) => {
-    const {  category_id } = category;
-
-    console.log(category_id)
+const Toys = () => {
+    
+   
     
     const [categoryToys, setCategoryToys] = useState([]);
 
 
-    const url = `http://localhost:5000/toys/${category_id}`;
+    const url = 'http://localhost:5000/toys';
 
     useEffect(() => {
         fetch(url)
@@ -21,6 +21,12 @@ const Toys = ({category}) => {
     return (
         <div>
             <h2 className="text-center text-5xl my-16 font-bold text-pink-900">Shop By Category : {categoryToys.length}</h2>
+            {
+                categoryToys.map(categoryToy => <ToyCard
+                key={categoryToy._id}
+                categoryToy={categoryToy}
+                ></ToyCard>)
+            }
         </div>
     );
 };
